@@ -33,5 +33,13 @@ export const theme = createTheme({
         fontSize: "1rem",
       },
     },
+    subtitle2: {
+      fontSize: "1rem",
+      userSelect: "none",
+      color: globalTheme.palette.primary.dark,
+      [breakpoints.down("sm")]: {
+        fontSize: ".9rem",
+      },
+    },
   },
 });
