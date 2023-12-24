@@ -1,13 +1,17 @@
 import i18next from "i18next";
 import { initReactI18next } from "react-i18next";
-import translation from "./en/translation.json";
+import translationEn from "./en/translation.json";
+import translationHu from "./hu/translation.json";
 
 i18next.use(initReactI18next).init({
   lng: "en",
   debug: true,
   resources: {
     en: {
-      translation,
+      translation: translationEn,
+    },
+    hu: {
+      translation: translationHu,
     },
   },
 });
