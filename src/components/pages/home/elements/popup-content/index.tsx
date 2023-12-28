@@ -17,7 +17,7 @@ const PopupContent = ({ cities, select }: PopupContentProps): JSX.Element => {
         return (
           <Paper
             onClick={() => select(city)}
-            key={city.latitude + city.longitude}
+            key={city.id}
             sx={{
               backgroundColor: "primary.main",
               color: "primary.light",
