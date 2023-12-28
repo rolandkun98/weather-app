@@ -13,8 +13,7 @@ const globalTheme = createTheme({
   },
 });
 
-export const theme = createTheme({
-  ...globalTheme,
+export const theme = createTheme(globalTheme, {
   typography: {
     h1: {
       fontSize: "3.3rem",
@@ -23,6 +22,15 @@ export const theme = createTheme({
       color: globalTheme.palette.primary.dark,
       [breakpoints.down("sm")]: {
         fontSize: "2rem",
+      },
+    },
+    h3: {
+      fontSize: "1.3rem",
+      fontWeight: 600,
+      userSelect: "none",
+      color: globalTheme.palette.primary.dark,
+      [breakpoints.down("sm")]: {
+        fontSize: "1.1rem",
       },
     },
     subtitle1: {
