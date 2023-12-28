@@ -1,12 +1,12 @@
 import { Languages } from "@/utils/enums/languages";
 import { useTranslation } from "react-i18next";
 
-interface IUseLanguageHandlerOutput {
+interface UseLanguageHandlerOutput {
   changeLanguage: (currentLanguage: string) => void;
   showOtherLanguage: (currentLanguage: string) => Languages;
 }
 
-export const useLanguageHandler = (): IUseLanguageHandlerOutput => {
+export const useLanguageHandler = (): UseLanguageHandlerOutput => {
   const { i18n } = useTranslation();
 
   const changeLanguage = (currentLanguage: string): void => {
