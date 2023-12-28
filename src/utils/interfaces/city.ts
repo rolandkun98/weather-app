@@ -10,6 +10,7 @@ export interface RawCityData {
 }
 
 export interface CityData {
+  id: string;
   name: string;
   latitude: number;
   longitude: number;
