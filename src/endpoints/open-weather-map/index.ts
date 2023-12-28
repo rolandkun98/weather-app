@@ -1,5 +1,6 @@
 import { CityData, RawCityData } from "@/utils/interfaces/city";
 import { createApi, fetchBaseQuery } from "@reduxjs/toolkit/query/react";
+import { v4 as uuidv4 } from "uuid";
 
 type GetCityByNameParams = {
   cityName: string;
@@ -17,6 +18,7 @@ const openWeatherMapApi = createApi({
         `geo/1.0/direct?q=${cityName}&limit=${limit}&appid=${process.env.API_KEY}`,
       transformResponse: (rawData: RawCityData[]) => {
         return rawData.map((city) => ({
+          id: uuidv4(),
           name: city.name,
           latitude: city.lat,
           longitude: city.lon,
