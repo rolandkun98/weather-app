@@ -1,0 +1,27 @@
+{
+  "global": {
+    "title": "Weather App"
+  },
+  "homePage": {
+    "validationSchemaMessages": {
+      "cityRequired": "Kérlek töltsd ki a mezőt!"
+    },
+    "subtitles": {
+      "element1": "Új város hozzáadása a listádhoz",
+      "element2": "(max 10 város adható hozzá)"
+    },
+    "labels": {
+      "city": "Város"
+    },
+    "buttons": {
+      "add": "Hozzáad"
+    },
+    "popup": {
+      "title": "Találatok",
+      "subtitles": {
+        "element1": "Szélesség",
+        "element2": "Hosszúság"
+      }
+    }
+  }
+}

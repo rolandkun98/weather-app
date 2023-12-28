@@ -1,0 +1,27 @@
+{
+  "global": {
+    "title": "Weather App"
+  },
+  "homePage": {
+    "validationSchemaMessages": {
+      "cityRequired": "Please fill the field!"
+    },
+    "subtitles": {
+      "element1": "Add a new city to your list",
+      "element2": "(max 10 cities can be added)"
+    },
+    "labels": {
+      "city": "City"
+    },
+    "buttons": {
+      "add": "Add"
+    },
+    "popup": {
+      "title": "Results",
+      "subtitles": {
+        "element1": "Latitude",
+        "element2": "Longitude"
+      }
+    }
+  }
+}
