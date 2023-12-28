@@ -1,7 +1,7 @@
 import { CityData } from "@/utils/interfaces/city";
-import { Box, Paper, Typography } from "@mui/material";
-import ArrowForwardIosIcon from "@mui/icons-material/ArrowForwardIos";
-import { useTranslation } from "react-i18next";
+import { Box } from "@mui/material";
+import AddCircleIcon from "@mui/icons-material/AddCircle";
+import CityRowContainer from "@/components/common-elements/city-row-container";
 
 interface PopupContentProps {
   cities: CityData[];
@@ -9,41 +9,17 @@ interface PopupContentProps {
 }
 
 const PopupContent = ({ cities, select }: PopupContentProps): JSX.Element => {
-  const { t } = useTranslation();
-
   return (
     <Box sx={{ height: "100%", padding: ".8rem", overflow: "scroll" }}>
       {cities.map((city) => {
         return (
-          <Paper
-            onClick={() => select(city)}
+          <CityRowContainer
+            onClick={select}
             key={city.id}
-            sx={{
-              backgroundColor: "primary.main",
-              color: "primary.light",
-              marginBottom: ".5rem",
-              padding: ".5rem .5rem",
-              display: "flex",
-              justifyContent: "space-between",
-              alignItems: "center",
-              cursor: "pointer",
-            }}
-          >
-            <Box>
-              <Typography variant="subtitle2" sx={{ color: "primary.light" }}>
-                {city.country} {city.name}
-              </Typography>
-              <Typography variant="subtitle2" sx={{ color: "primary.light" }}>
-                {t("homePage.popup.subtitles.element1")}: {city.latitude}
-              </Typography>
-              <Typography variant="subtitle2" sx={{ color: "primary.light" }}>
-                {t("homePage.popup.subtitles.element2")}: {city.longitude}
-              </Typography>
-            </Box>
-            <Box>
-              <ArrowForwardIosIcon />
-            </Box>
-          </Paper>
+            city={city}
+            icon={<AddCircleIcon />}
+            variant="expanded"
+          />
         );
       })}
     </Box>
