@@ -1,6 +1,9 @@
 {
   "global": {
-    "title": "Weather App"
+    "appTitle": "Weather App",
+    "buttons": {
+      "back": "Back"
+    }
   },
   "homePage": {
     "validationSchemaMessages": {
