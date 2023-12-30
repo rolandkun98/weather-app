@@ -25,6 +25,15 @@ export const theme = createTheme(globalTheme, {
       },
     },
     h2: {
+      fontSize: "1.8rem",
+      fontWeight: 500,
+      userSelect: "none",
+      color: globalTheme.palette.primary.dark,
+      [breakpoints.down("sm")]: {
+        fontSize: "1.5rem",
+      },
+    },
+    h3: {
       fontSize: "1.5rem",
       fontWeight: 500,
       userSelect: "none",
@@ -33,7 +42,7 @@ export const theme = createTheme(globalTheme, {
         fontSize: "1.3rem",
       },
     },
-    h3: {
+    h4: {
       fontSize: "1.3rem",
       fontWeight: 600,
       userSelect: "none",
