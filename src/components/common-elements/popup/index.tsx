@@ -32,7 +32,7 @@ const Popup = ({ title, children, close }: PopupProps): JSX.Element => {
           }}
         >
           <Typography
-            variant="h3"
+            variant="h4"
             sx={{ display: "flex", alignItems: "center" }}
           >
             {title}
