@@ -1,4 +1,4 @@
-import { Button, Paper, TextField, Typography } from "@mui/material";
+import { Button, TextField, Typography } from "@mui/material";
 import * as Yup from "yup";
 import { useFormik } from "formik";
 import { useTranslation } from "react-i18next";
@@ -10,6 +10,7 @@ import PopupContent from "../popup-content";
 import { CityData } from "@/utils/interfaces/city";
 import { citiesSlice } from "@/utils/redux/slices/cities-slice";
 import { useDispatch } from "react-redux";
+import { PaperBox } from "@/components/common-elements/styled-components/paper-box";
 
 const Form = styled("form")({
   display: "flex",
@@ -53,14 +54,9 @@ const CitySearcher = (): JSX.Element => {
   });
 
   return (
-    <Paper
+    <PaperBox
       sx={{
-        width: "90%",
-        marginTop: "1.5rem",
         padding: "1rem 0",
-        display: "flex",
-        flexDirection: "column",
-        alignItems: "center",
       }}
     >
       <Typography variant="subtitle1">
@@ -93,7 +89,7 @@ const CitySearcher = (): JSX.Element => {
           {popup.content}
         </Popup>
       )}
-    </Paper>
+    </PaperBox>
   );
 };
 

@@ -1,10 +1,10 @@
 import CityRowContainer from "@/components/common-elements/city-row-container";
 import { useAppSelector } from "@/utils/redux/hooks/use-app-selector";
-import { Paper, Typography } from "@mui/material";
+import { Typography } from "@mui/material";
 import ArrowForwardIosIcon from "@mui/icons-material/ArrowForwardIos";
 import { useTranslation } from "react-i18next";
 import { useRouter } from "next/router";
-import uriEncoder from "@/utils/uri-encoder";
+import { PaperBox } from "@/components/common-elements/styled-components/paper-box";
 
 const CityList = (): JSX.Element => {
   const { t } = useTranslation();
@@ -12,15 +12,10 @@ const CityList = (): JSX.Element => {
   const cities = useAppSelector((state) => state.cities);
 
   return (
-    <Paper
+    <PaperBox
       sx={{
-        width: "90%",
         maxHeight: "50%",
-        marginTop: "1.5rem",
         padding: "1rem .8rem",
-        display: "flex",
-        flexDirection: "column",
-        alignItems: "center",
         overflow: "scroll",
       }}
     >
@@ -32,11 +27,7 @@ const CityList = (): JSX.Element => {
           return (
             <CityRowContainer
               onClick={async (city) => {
-                router.push(
-                  `/${uriEncoder.encode(city.name)}?lon=${city.longitude}&lat=${
-                    city.latitude
-                  }`
-                );
+                router.push(`/city/${city.id}`);
               }}
               key={city.id}
               city={city}
@@ -50,7 +41,7 @@ const CityList = (): JSX.Element => {
           {t("homePage.cityList.subtitles.element1")}
         </Typography>
       )}
-    </Paper>
+    </PaperBox>
   );
 };
 
