@@ -24,7 +24,7 @@ const CityList = (): JSX.Element => {
         overflow: "scroll",
       }}
     >
-      <Typography variant="h2" sx={{ marginBottom: ".5rem" }}>
+      <Typography variant="h3" sx={{ marginBottom: ".5rem" }}>
         {t("homePage.cityList.title")}
       </Typography>
       {cities.length ? (
