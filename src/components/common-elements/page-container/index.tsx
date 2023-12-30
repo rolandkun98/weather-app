@@ -1,4 +1,4 @@
-import { Box, Button } from "@mui/material";
+import { Box, Button, Typography } from "@mui/material";
 import { useTranslation } from "react-i18next";
 import LanguageIcon from "@mui/icons-material/Language";
 import { useLanguageHandler } from "@/hooks/use-language-handler";
@@ -7,7 +7,7 @@ interface PageContainerProps {
 }
 
 const PageContainer = ({ children }: PageContainerProps): JSX.Element => {
-  const { i18n } = useTranslation();
+  const { i18n, t } = useTranslation();
   const { changeLanguage, showOtherLanguage } = useLanguageHandler();
 
   return (
@@ -25,11 +25,12 @@ const PageContainer = ({ children }: PageContainerProps): JSX.Element => {
       <Box
         sx={{
           width: "100%",
-          paddingRight: "1rem",
+          padding: "0 1rem",
           display: "flex",
-          justifyContent: "flex-end",
+          justifyContent: "space-between",
         }}
       >
+        <Typography variant="h1">{t("global.title")}</Typography>
         <Button
           startIcon={<LanguageIcon />}
           onClick={() => changeLanguage(i18n.language)}
