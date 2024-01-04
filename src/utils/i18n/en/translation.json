@@ -32,5 +32,75 @@
         "element1": "List is empty"
       }
     }
+  },
+  "cityPage": {
+    "weatherContainer": {
+      "titles": {
+        "currentWeather": "Current Weather",
+        "forecast": "5 Days Forecast"
+      },
+      "subtitles": {
+        "clouds": "Clouds",
+        "windSpeed": "Wind Speed",
+        "temperature": "Temperature",
+        "humidity": "Humidity"
+      },
+      "weatherConditions": {
+        "thunderstormWithLightRain": "Thunderstorm with light rain",
+        "thunderstormWithRain": "Thunderstorm with rain",
+        "thunderstormWithHeavyRain": "Thunderstorm with heavy rain",
+        "lightThunderstorm": "Light thunderstorm",
+        "thunderstorm": "Thunderstorm",
+        "heavyThunderstorm": "Heavy thunderstorm",
+        "raggedThunderstorm": "Ragged thunderstorm",
+        "thunderstormWithLightDrizzle": "Thunderstorm with light drizzle",
+        "thunderstormWithDrizzle": "Thunderstorm with drizzle",
+        "thunderstormWithHeavyDrizzle": "Thunderstorm with heavy drizzle",
+        "lightIntensityDrizzle": "Light intensity drizzle",
+        "drizzle": "Drizzle",
+        "heavyIntensityDrizzle": "Heavy intensity drizzle",
+        "lightIntensityDrizzleRain": "Light intensity drizzle rain",
+        "drizzleRain": "Drizzle rain",
+        "heavyIntensityDrizzleRain": "Heavy intensity drizzle rain",
+        "showerRainAndDrizzle": "Shower rain and drizzle",
+        "heavyShowerRainAndDrizzle": "Heavy shower rain and drizzle",
+        "showerDrizzle": "Shower drizzle",
+        "lightRain": "Light rain",
+        "moderateRain": "Moderate rain",
+        "heavyIntensityRain": "Heavy intensity rain",
+        "veryHeavyRain": "Very heavy rain",
+        "extremeRain": "Extreme rain",
+        "freezingRain": "Freezing rain",
+        "lightIntensityShowerRain": "Light intensity shower rain",
+        "showerRain": "Shower rain",
+        "heavyIntensityShowerRain": "Heavy intensity shower rain",
+        "raggedShowerRain": "Ragged shower rain",
+        "lightSnow": "Light snow",
+        "snow": "Snow",
+        "heavySnow": "Heavy snow",
+        "sleet": "Sleet",
+        "lightShowerSleet": "Light shower sleet",
+        "showerSleet": "Shower sleet",
+        "lightRainAndSnow": "Light rain and snow",
+        "rainAndSnow": "Rain and snow",
+        "lightShowerSnow": "Light shower snow",
+        "showerSnow": "Shower snow",
+        "heavyShowerSnow": "Heavy shower snow",
+        "mist": "Mist",
+        "smoke": "Smoke",
+        "haze": "Haze",
+        "fog": "Fog",
+        "sand": "Sand",
+        "dust": "Dust",
+        "volcanic ash": "Volcanic ash",
+        "squalls": "Squalls",
+        "tornado": "Tornado",
+        "clearSky": "Clear sky",
+        "fewClouds": "Few clouds",
+        "scatteredClouds": "Scattered clouds",
+        "brokenClouds": "Broken clouds",
+        "overcastClouds": "Overcast clouds"
+      }
+    }
   }
 }

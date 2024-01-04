@@ -32,5 +32,75 @@
         "element1": "A lista üres"
       }
     }
+  },
+  "cityPage": {
+    "weatherContainer": {
+      "titles": {
+        "currentWeather": "Aktuális Időjárás",
+        "forecast": "5 Napos Időjárás Előrejelzés"
+      },
+      "subtitles": {
+        "clouds": "Felhő",
+        "windSpeed": "Szél",
+        "temperature": "Hőmérséklet",
+        "humidity": "Páratartalom"
+      },
+      "weatherConditions": {
+        "thunderstormWithLightRain": "Zivatar enyhe esővel",
+        "thunderstormWithRain": "Zivatar esővel",
+        "thunderstormWithHeavyRain": "Zivatar erős esővel",
+        "lightThunderstorm": "Enyhe zivatar",
+        "thunderstorm": "Zivatar",
+        "heavyThunderstorm": "Erős zivatar",
+        "raggedThunderstorm": "Szakadozott zivatar",
+        "thunderstormWithLightDrizzle": "Zivatar enyhe szemerkélő esővel",
+        "thunderstormWithDrizzle": "Zivatar szemerkélő esővel",
+        "thunderstormWithHeavyDrizzle": "Zivatar sűrű szemerkélő esővel",
+        "lightIntensityDrizzle": "Enyhe intenzitású szemerkélő eső",
+        "drizzle": "Szemerkélő eső",
+        "heavyIntensityDrizzle": "Erős intenzitású szemerkélő eső",
+        "lightIntensityDrizzleRain": "Enyhe intenzitású szemerkélő eső",
+        "drizzleRain": "Szemerkélő eső",
+        "heavyIntensityDrizzleRain": "Erős intenzitású szemerkélő eső",
+        "showerRainAndDrizzle": "Zápor és szemerkélő eső",
+        "heavyShowerRainAndDrizzle": "Erős zápor és szemerkélő eső",
+        "showerDrizzle": "Zápor szemerkélő esővel",
+        "lightRain": "Enyhe eső",
+        "moderateRain": "Közepesen erős eső",
+        "heavyIntensityRain": "Erős intenzitású eső",
+        "veryHeavyRain": "Nagyon erős eső",
+        "extremeRain": "Extrém erős eső",
+        "freezingRain": "Fagyos eső",
+        "lightIntensityShowerRain": "Enyhe intenzitású zápor eső",
+        "showerRain": "Zápor eső",
+        "heavyIntensityShowerRain": "Erős intenzitású zápor eső",
+        "raggedShowerRain": "Szakadozott zápor eső",
+        "lightSnow": "Enyhe hó",
+        "snow": "Hó",
+        "heavySnow": "Erős hó",
+        "sleet": "Havas eső",
+        "lightShowerSleet": "Enyhe intenzitású zápor havas esővel",
+        "showerSleet": "Zápor havas esővel",
+        "lightRainAndSnow": "Enyhe eső és hó",
+        "rainAndSnow": "Eső és hó",
+        "lightShowerSnow": "Enyhe intenzitású zápor hóval",
+        "showerSnow": "Zápor hóval",
+        "heavyShowerSnow": "Erős zápor hóval",
+        "mist": "Köd",
+        "smoke": "Füst",
+        "haze": "Párás köd",
+        "fog": "Köd",
+        "sand": "Homokvihar",
+        "dust": "Porvihar",
+        "volcanic ash": "Vulkáni hamu",
+        "squalls": "Széllökés",
+        "tornado": "Tornádó",
+        "clearSky": "Derült ég",
+        "fewClouds": "Kevés felhő",
+        "scatteredClouds": "Szétszórt felhők",
+        "brokenClouds": "Szakadozott felhők",
+        "overcastClouds": "Borult ég"
+      }
+    }
   }
 }
