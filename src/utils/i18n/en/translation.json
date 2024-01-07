@@ -3,6 +3,12 @@
     "appTitle": "Weather App",
     "buttons": {
       "back": "Back"
+    },
+    "weatherElements": {
+      "clouds": "Clouds",
+      "windSpeed": "Wind Speed",
+      "temperature": "Temperature",
+      "humidity": "Humidity"
     }
   },
   "homePage": {
@@ -26,6 +32,9 @@
         "element2": "Longitude"
       }
     },
+    "toastMessages": {
+      "successSave": "Selected city has been added to your list!"
+    },
     "cityList": {
       "title": "Cities",
       "subtitles": {
@@ -38,12 +47,6 @@
       "titles": {
         "currentWeather": "Current Weather",
         "forecast": "5 Days Forecast"
-      },
-      "subtitles": {
-        "clouds": "Clouds",
-        "windSpeed": "Wind Speed",
-        "temperature": "Temperature",
-        "humidity": "Humidity"
       },
       "weatherConditions": {
         "thunderstormWithLightRain": "Thunderstorm with light rain",
@@ -101,6 +104,15 @@
         "brokenClouds": "Broken clouds",
         "overcastClouds": "Overcast clouds"
       }
+    },
+    "chartContainer": {
+      "title": "5 Days Data Chart"
+    },
+    "buttons": {
+      "remove": "Remove city from the list"
+    },
+    "toastMessages": {
+      "successRemove": "City has been removed from your list!"
     }
   }
 }

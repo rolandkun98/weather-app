@@ -3,6 +3,12 @@
     "appTitle": "Weather App",
     "buttons": {
       "back": "Vissza"
+    },
+    "weatherElements": {
+      "clouds": "Felhők",
+      "windSpeed": "Szélsebesség",
+      "temperature": "Hőmérséklet",
+      "humidity": "Páratartalom"
     }
   },
   "homePage": {
@@ -26,6 +32,9 @@
         "element2": "Hosszúság"
       }
     },
+    "toastMessages": {
+      "successSave": "A kiválasztott város hozzáadva a listádhoz!"
+    },
     "cityList": {
       "title": "Városok",
       "subtitles": {
@@ -38,12 +47,6 @@
       "titles": {
         "currentWeather": "Aktuális Időjárás",
         "forecast": "5 Napos Időjárás Előrejelzés"
-      },
-      "subtitles": {
-        "clouds": "Felhő",
-        "windSpeed": "Szél",
-        "temperature": "Hőmérséklet",
-        "humidity": "Páratartalom"
       },
       "weatherConditions": {
         "thunderstormWithLightRain": "Zivatar enyhe esővel",
@@ -101,6 +104,15 @@
         "brokenClouds": "Szakadozott felhők",
         "overcastClouds": "Borult ég"
       }
+    },
+    "chartContainer": {
+      "title": "5 Napos Adatdiagram"
+    },
+    "buttons": {
+      "remove": "Város törlése a listából"
+    },
+    "toastMessages": {
+      "successRemove": "A város sikeresen eltávolítva a listádból!"
     }
   }
 }
