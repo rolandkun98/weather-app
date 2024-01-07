@@ -11,6 +11,7 @@ import { CityData } from "@/utils/interfaces/city";
 import { citiesSlice } from "@/redux/slices/cities-slice";
 import { useDispatch } from "react-redux";
 import { PaperBox } from "@/components/common-elements/styled-components/paper-box";
+import { toast } from "@/components/services/toast";
 
 const Form = styled("form")({
   display: "flex",
@@ -44,6 +45,7 @@ const CitySearcher = (): JSX.Element => {
         resetForm();
         popup.close();
         dispatch(citiesSlice.actions.addNewCity(city));
+        toast.success(t("homePage.toastMessages.successSave"));
       };
 
       popup.show(
