@@ -1,4 +1,4 @@
-import { citiesSlice } from "@/utils/redux/slices/cities-slice";
+import { citiesSlice } from "@/redux/slices/cities-slice";
 import { useEffect } from "react";
 import { useDispatch } from "react-redux";
 

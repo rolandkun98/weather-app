@@ -1,5 +1,5 @@
 import CityRowContainer from "@/components/common-elements/city-row-container";
-import { useAppSelector } from "@/utils/redux/hooks/use-app-selector";
+import { useAppSelector } from "@/redux/hooks/use-app-selector";
 import { Typography } from "@mui/material";
 import ArrowForwardIosIcon from "@mui/icons-material/ArrowForwardIos";
 import { useTranslation } from "react-i18next";

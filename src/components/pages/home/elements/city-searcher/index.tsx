@@ -8,7 +8,7 @@ import Popup from "@/components/common-elements/popup";
 import { usePopup } from "@/hooks/use-popup";
 import PopupContent from "../popup-content";
 import { CityData } from "@/utils/interfaces/city";
-import { citiesSlice } from "@/utils/redux/slices/cities-slice";
+import { citiesSlice } from "@/redux/slices/cities-slice";
 import { useDispatch } from "react-redux";
 import { PaperBox } from "@/components/common-elements/styled-components/paper-box";
 
