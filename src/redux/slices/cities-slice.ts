@@ -15,5 +15,9 @@ export const citiesSlice = createSlice({
     addNewCity: (state, action: { payload: CityData }) => {
       state.push(action.payload);
     },
+    removeCity: (state, action: { payload: string }) => {
+      const filteredState = state.filter((item) => item.id !== action.payload);
+      return filteredState;
+    },
   },
 });
