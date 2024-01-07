@@ -6,6 +6,7 @@ import { Provider as ReduxProvider } from "react-redux";
 import "@/utils/i18n/config";
 import store from "@/redux/store/store";
 import Initializer from "@/components/services/initializer";
+import Toast from "@/components/services/toast";
 
 export default function App({ Component, pageProps }: AppProps) {
   return (
@@ -13,6 +14,7 @@ export default function App({ Component, pageProps }: AppProps) {
       <Initializer>
         <ThemeProvider theme={theme}>
           <Component {...pageProps} />
+          <Toast />
         </ThemeProvider>
       </Initializer>
     </ReduxProvider>
