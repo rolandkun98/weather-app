@@ -19,34 +19,36 @@ export const useFormatChartData = ({
 
   useEffect(() => {
     setChartLabes([]);
-    const dataSummary: {
-      clouds: number[];
-      windSpeed: number[];
-      humidity: number[];
-      temperature: number[];
-    } = {
-      clouds: [],
-      windSpeed: [],
-      humidity: [],
-      temperature: [],
-    };
-    const chartData: number[][] = [];
+    if (weatherData.length) {
+      const dataSummary: {
+        clouds: number[];
+        windSpeed: number[];
+        humidity: number[];
+        temperature: number[];
+      } = {
+        clouds: [],
+        windSpeed: [],
+        humidity: [],
+        temperature: [],
+      };
+      const chartData: number[][] = [];
 
-    for (const weatherDataItem of weatherData) {
-      Object.entries(weatherDataItem).forEach(([key, value]) => {
-        dataSummary[key as WeatherChartDataItemNames].push(value);
+      for (const weatherDataItem of weatherData) {
+        Object.entries(weatherDataItem).forEach(([key, value]) => {
+          dataSummary[key as WeatherChartDataItemNames]?.push(value);
+        });
+      }
+
+      Object.entries(dataSummary).forEach(([key, value]) => {
+        chartData.push(value);
+        setChartLabes((prevArr) => [
+          ...prevArr,
+          key as WeatherChartDataItemNames,
+        ]);
       });
+
+      setWeatherChartData(chartData);
     }
-
-    Object.entries(dataSummary).forEach(([key, value]) => {
-      chartData.push(value);
-      setChartLabes((prevArr) => [
-        ...prevArr,
-        key as WeatherChartDataItemNames,
-      ]);
-    });
-
-    setWeatherChartData(chartData);
   }, [weatherData]);
 
   return {
