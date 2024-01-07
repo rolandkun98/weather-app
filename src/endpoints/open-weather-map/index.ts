@@ -73,10 +73,10 @@ const openWeatherMapApi = createApi({
         const avgForecastData: WeatherData[] = [];
 
         for (const listItem of rawData.list) {
-          const today = format(new Date(), DateFormat.PRIMARY);
+          const today = format(new Date(), DateFormat.SECONDARY);
           const formattedDate = format(
             new Date(listItem.dt_txt),
-            DateFormat.PRIMARY
+            DateFormat.SECONDARY
           );
 
           if (today !== formattedDate) {
