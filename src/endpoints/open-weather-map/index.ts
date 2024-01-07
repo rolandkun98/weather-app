@@ -27,7 +27,7 @@ type GetDailyForecast5DaysParams = {
 const openWeatherMapApi = createApi({
   reducerPath: "openWeatherMapApi",
   baseQuery: fetchBaseQuery({
-    baseUrl: "http://api.openweathermap.org/",
+    baseUrl: "https://api.openweathermap.org/",
   }),
   endpoints: (builder) => ({
     getCityByName: builder.query<CityData[], GetCityByNameParams>({
