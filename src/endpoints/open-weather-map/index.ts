@@ -75,7 +75,7 @@ const openWeatherMapApi = createApi({
         for (const listItem of rawData.list) {
           const today = format(new Date(), DateFormat.SECONDARY);
           const formattedDate = format(
-            new Date(listItem.dt_txt),
+            new Date(listItem?.dt_txt),
             DateFormat.SECONDARY
           );
 
