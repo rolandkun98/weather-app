@@ -3,7 +3,7 @@ import { theme } from "@/styles/theme";
 import { Box, Typography } from "@mui/material";
 import { LineChart } from "@mui/x-charts/LineChart";
 import { AutoSizer } from "react-virtualized";
-import { useFormatChartData } from "../../hooks/user-format-chart-data";
+import { useFormatChartData } from "../../hooks/use-format-chart-data";
 import { WeatherData } from "@/utils/interfaces/weather";
 import { useState } from "react";
 import Paginator from "@/components/common-elements/paginator";

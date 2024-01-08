@@ -1,5 +1,6 @@
 import { WeatherChartDataItemNames } from "@/utils/enums/weather-chart-data-item-names";
 import { WeatherData } from "@/utils/interfaces/weather";
+import { mpsToKph } from "@/utils/mps-to-kph";
 import { useEffect, useState } from "react";
 
 interface UseFormatChartDataInput {
@@ -35,7 +36,12 @@ export const useFormatChartData = ({
 
       for (const weatherDataItem of weatherData) {
         Object.entries(weatherDataItem).forEach(([key, value]) => {
-          dataSummary[key as WeatherChartDataItemNames]?.push(value);
+          if (key === WeatherChartDataItemNames.WINDS_SPEED) {
+            const convertedValue = mpsToKph(value);
+            dataSummary[key as WeatherChartDataItemNames]?.push(convertedValue);
+          } else {
+            dataSummary[key as WeatherChartDataItemNames]?.push(value);
+          }
         });
       }
 
