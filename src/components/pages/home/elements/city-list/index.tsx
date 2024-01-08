@@ -5,16 +5,19 @@ import ArrowForwardIosIcon from "@mui/icons-material/ArrowForwardIos";
 import { useTranslation } from "react-i18next";
 import { useRouter } from "next/router";
 import { PaperBox } from "@/components/common-elements/styled-components/paper-box";
+import { useBreakpoints } from "@/hooks/use-breakpoints";
 
 const CityList = (): JSX.Element => {
   const { t } = useTranslation();
   const router = useRouter();
   const cities = useAppSelector((state) => state.cities);
+  const { isAboveMd } = useBreakpoints();
 
   return (
     <PaperBox
       sx={{
         maxHeight: "50%",
+        width: isAboveMd ? "60%" : undefined,
         padding: "1rem .8rem",
         overflow: "scroll",
       }}

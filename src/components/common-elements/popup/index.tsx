@@ -1,5 +1,6 @@
 import { Box, Paper, IconButton, Typography } from "@mui/material";
 import ClearIcon from "@mui/icons-material/Clear";
+import { useBreakpoints } from "@/hooks/use-breakpoints";
 
 interface PopupProps {
   title: string;
@@ -8,6 +9,8 @@ interface PopupProps {
 }
 
 const Popup = ({ title, children, close }: PopupProps): JSX.Element => {
+  const { isAboveMd } = useBreakpoints();
+
   return (
     <Box
       sx={{
@@ -21,7 +24,7 @@ const Popup = ({ title, children, close }: PopupProps): JSX.Element => {
         alignItems: "center",
       }}
     >
-      <Paper sx={{ width: "80%", height: "50%" }}>
+      <Paper sx={{ width: isAboveMd ? "25%" : "80%", height: "50%" }}>
         <Box
           sx={{
             height: "3rem",

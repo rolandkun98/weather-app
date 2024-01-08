@@ -26,7 +26,7 @@ const WeatherDataChart = ({
   return (
     <PaperBox sx={{ paddingLeft: ".8rem", paddingBottom: "2rem" }}>
       <Typography variant="h3">{t("cityPage.chartContainer.title")}</Typography>
-      <Box sx={{ width: "20rem", height: "15rem", paddingRight: ".8rem" }}>
+      <Box sx={{ width: "100%", height: "15rem", paddingRight: ".8rem" }}>
         <Paginator
           text={t(
             `global.weatherElements.${chartLabels[selectedWeatherChartDataIndex]}`

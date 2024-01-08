@@ -1,9 +1,10 @@
-import { Box, Button, Typography } from "@mui/material";
+import { Box, Button, Paper, Typography } from "@mui/material";
 import { useTranslation } from "react-i18next";
 import LanguageIcon from "@mui/icons-material/Language";
 import { useLanguageHandler } from "@/hooks/use-language-handler";
 import KeyboardBackspaceIcon from "@mui/icons-material/KeyboardBackspace";
 import { useRouter } from "next/router";
+import { useBreakpoints } from "@/hooks/use-breakpoints";
 interface PageContainerProps {
   children: React.ReactNode;
   backRoute?: string;
@@ -16,54 +17,68 @@ const PageContainer = ({
   const { i18n, t } = useTranslation();
   const router = useRouter();
   const { changeLanguage, showOtherLanguage } = useLanguageHandler();
+  const { isAboveMd } = useBreakpoints();
 
   return (
     <Box
       sx={{
         width: "100vw",
         height: "100vh",
-        paddingTop: "3rem",
+        padding: "3rem 0",
         backgroundColor: "primary.light",
         display: "flex",
-        flexDirection: "column",
+        justifyContent: "center",
         alignItems: "center",
       }}
     >
-      <Box
+      <Paper
         sx={{
-          width: "100%",
-          padding: "0 1rem",
+          width: isAboveMd ? "50%" : "100%",
+          height: "100%",
+          padding: isAboveMd ? "3rem 1rem 0 1rem" : 0,
           display: "flex",
-          justifyContent: "space-between",
+          flexDirection: "column",
+          alignItems: "center",
+          backgroundColor: isAboveMd ? "#fff" : "transparent",
+          boxShadow: isAboveMd ? undefined : "none",
         }}
       >
-        <Typography variant="h1">{t("global.appTitle")}</Typography>
-        <Button
-          startIcon={<LanguageIcon />}
-          onClick={() => changeLanguage(i18n.language)}
-        >
-          {showOtherLanguage(i18n.language).toUpperCase()}
-        </Button>
-      </Box>
-      {backRoute && (
         <Box
           sx={{
             width: "100%",
             padding: "0 1rem",
-            margin: ".5rem 0",
             display: "flex",
-            justifyContent: "flex-start",
+            justifyContent: "space-between",
           }}
         >
+          <Typography variant="h1">{t("global.appTitle")}</Typography>
           <Button
-            startIcon={<KeyboardBackspaceIcon />}
-            onClick={() => router.push(backRoute)}
+            startIcon={<LanguageIcon />}
+            onClick={() => changeLanguage(i18n.language)}
           >
-            {t("global.buttons.back")}
+            {showOtherLanguage(i18n.language).toUpperCase()}
           </Button>
         </Box>
-      )}
-      {children}
+        {backRoute && (
+          <Box
+            sx={{
+              width: "100%",
+              padding: "0 1rem",
+              margin: ".5rem 0",
+              display: "flex",
+              justifyContent: "flex-start",
+            }}
+          >
+            <Button
+              startIcon={<KeyboardBackspaceIcon />}
+              onClick={() => router.push(backRoute)}
+            >
+              {t("global.buttons.back")}
+            </Button>
+          </Box>
+        )}
+        {children}
+      </Paper>
     </Box>
   );
 };
