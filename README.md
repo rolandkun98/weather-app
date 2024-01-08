@@ -1,6 +1,6 @@
 # Weather App
 
-A responsive weather application.
+A responsive weather application. <br>
 APIs from: https://openweathermap.org
 
 ## Stacks
