@@ -48,7 +48,7 @@ const WeatherDataChart = ({
                   xAxis={[
                     {
                       data: weatherData.map((item) =>
-                        format(new Date(item.date), DateFormat.TERTIARY)
+                        format(item.date, DateFormat.TERTIARY)
                       ),
                       scaleType: "point",
                     },
