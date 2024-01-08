@@ -73,33 +73,32 @@ const openWeatherMapApi = createApi({
         const avgForecastData: WeatherData[] = [];
 
         for (const listItem of rawData.list) {
-          const today = format(new Date(), DateFormat.SECONDARY);
-          const formattedDate = format(
-            new Date(listItem?.dt_txt || ""),
-            DateFormat.SECONDARY
-          );
+          if (listItem?.dt_txt) {
+            const today = format(new Date(), DateFormat.SECONDARY);
+            const formattedDate = format(listItem.dt_txt, DateFormat.SECONDARY);
 
-          if (today !== formattedDate) {
-            const foundItem = totalForecastData.find(
-              (totalForecastItem) => totalForecastItem.date === formattedDate
-            );
+            if (today !== formattedDate) {
+              const foundItem = totalForecastData.find(
+                (totalForecastItem) => totalForecastItem.date === formattedDate
+              );
 
-            if (foundItem) {
-              foundItem.clouds += listItem.clouds.all;
-              foundItem.windSpeed += listItem.wind.speed;
-              foundItem.humidity += listItem.main.humidity;
-              foundItem.temperature += listItem.main.temp;
-            } else {
-              const newTotalForecastItem: WeatherData = {
-                clouds: listItem.clouds.all,
-                windSpeed: listItem.wind.speed,
-                humidity: listItem.main.humidity,
-                temperature: listItem.main.temp,
-                weatherDescription: "",
-                icon: "",
-                date: formattedDate,
-              };
-              totalForecastData.push(newTotalForecastItem);
+              if (foundItem) {
+                foundItem.clouds += listItem.clouds.all;
+                foundItem.windSpeed += listItem.wind.speed;
+                foundItem.humidity += listItem.main.humidity;
+                foundItem.temperature += listItem.main.temp;
+              } else {
+                const newTotalForecastItem: WeatherData = {
+                  clouds: listItem.clouds.all,
+                  windSpeed: listItem.wind.speed,
+                  humidity: listItem.main.humidity,
+                  temperature: listItem.main.temp,
+                  weatherDescription: "",
+                  icon: "",
+                  date: formattedDate,
+                };
+                totalForecastData.push(newTotalForecastItem);
+              }
             }
           }
         }
